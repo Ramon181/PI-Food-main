@@ -1,0 +1,589 @@
+.signup-container {
+  width: 97%;
+  margin-top: 110px;
+  align-items: center;
+  padding: auto;
+  border-radius: 10px;
+}
+
+.ddd{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    align-items: center;
+
+}
+
+.display{
+  text-align: justify;
+}
+.label_une{
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.form_box {
+  display: grid;
+  grid-template-areas: "left right";
+}
+
+.header-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0 5px 110px 0;
+  height: 700px;
+}
+
+.image-form {
+  height: 770px;
+  width: 500px;
+
+}
+
+.link-form {
+  border-radius: 10px;
+  width: 100%;
+  height: 90%;
+}
+
+.box-form {
+  width: 100%;
+  display: flex;
+  margin: -20px 5px 5px 5px;
+  flex-direction: column;
+}
+
+.feedback-input {
+  color: rgb(0, 0, 0);
+  background: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border: 3px solid gray;
+  border-radius: 7px;
+  line-height: 22px;
+  transition: 0.3s;
+  margin: 3px;
+  padding: 13px;
+  width: 99%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  outline-color: #e8e8e8;
+  background: #e8e8e8;
+  box-shadow: inset 20px 20px 60px #c5c5c5,
+    inset -20px -20px 60px #ffffff;
+  transition: 0.3s;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+.diett {
+  margin: 5px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 3px solid gray;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.radiogroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  list-style-type: none;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+}
+
+.state {
+  position: absolute;
+  left: -10000000px;
+  pointer-events: none;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #000000;
+}
+
+.text {
+  margin-left: 16px;
+  transition: opacity .2s linear, transform .2s ease-out;
+}
+
+.indicator {
+  position: relative;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  box-shadow: 3px #747474;
+  overflow: hidden;
+}
+
+.indicator::before,
+.indicator::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+.indicator::before {
+  box-shadow:
+    -4px -2px 4px 0px #646464,
+    4px 2px 8px 0px rgb(102, 102, 102);
+}
+
+.indicator::after {
+  background-color: #969696;
+  box-shadow:
+    -4px -2px 4px 0px rgb(63, 63, 63),
+    4px 2px 8px 0px #636363;
+  transform: scale3d(1, 1, 1);
+  transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+}
+
+.state:checked~.label .indicator::after {
+  transform: scale3d(.975, .975, 1) translate3d(0, 10%, 0);
+  opacity: 0;
+}
+
+.state:focus~.label .text {
+  transform: translate3d(8px, 0, 0);
+  opacity: 1;
+}
+
+.label:hover .text {
+  opacity: 1;
+}
+
+.errorMessage {
+  margin-top: 0px;
+  margin-bottom: 2px;
+  color: red;
+}
+
+.form-buttons{
+  cursor: pointer;
+  margin-left: 0;
+}
+
+ 
+ .icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  width: 120px;
+}
+
+.add-btn::before,
+.add-btn::after {
+  
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: seagreen;
+}
+
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+  outline: none;
+}
+
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background: seagreen;
+  overflow: hidden;
+}
+
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+
+@media (max-width: 811px){
+  .signup-container {
+    width: 97%;
+    margin-top: 350px;
+    align-items: center;
+    padding: auto;
+    border-radius: 10px;
+  }
+  
+  .ddd{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      align-items: center;
+  
+  }
+  
+  .display{
+    text-align: justify;
+  }
+  .label_une{
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .form_box {
+    display: grid;
+    grid-template-areas: "left right";
+  }
+  
+  .header-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 5px 300px 0;
+    height: 700px;
+  }
+  
+  .image-form {
+    height: 100%;
+    width: 100%;
+  
+  }
+  
+  .link-form {
+    border-radius: 10px;
+    width: 100%;
+    height: 90%;
+  }
+  
+  .box-form {
+    width: 100%;
+    display: flex;
+    margin: -20px 5px 5px 5px;
+    flex-direction: column;
+  }
+  
+  .feedback-input {
+    color: rgb(0, 0, 0);
+    background: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border: 3px solid gray;
+    border-radius: 7px;
+    line-height: 22px;
+    transition: 0.3s;
+    margin: 3px;
+    padding: 13px;
+    width: 99%;
+    box-sizing: border-box;
+    outline: 0;
+  }
+  
+  .feedback-input:focus {
+    outline-color: #e8e8e8;
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5,
+      inset -20px -20px 60px #ffffff;
+    transition: 0.3s;
+  }
+  
+  textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+  }
+  
+  .diett {
+    margin: 5px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 3px solid gray;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .radiogroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    list-style-type: none;
+  }
+  
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+  }
+  
+  .state {
+    position: absolute;
+    left: -10000000px;
+    pointer-events: none;
+  }
+  
+  .label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  .text {
+    font-size: 15px;
+    margin-left: 6px;
+    transition: opacity .2s linear, transform .2s ease-out;
+  }
+  
+  .indicator {
+    position: relative;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    box-shadow: 3px #747474;
+    overflow: hidden;
+  }
+  
+  .indicator::before,
+  .indicator::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+  }
+  
+  .indicator::before {
+    box-shadow:
+      -4px -2px 4px 0px #646464,
+      4px 2px 8px 0px rgb(102, 102, 102);
+  }
+  
+  .indicator::after {
+    background-color: #969696;
+    box-shadow:
+      -4px -2px 4px 0px rgb(63, 63, 63),
+      4px 2px 8px 0px #636363;
+    transform: scale3d(1, 1, 1);
+    transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+  }
+  
+  .state:checked~.label .indicator::after {
+    transform: scale3d(.975, .975, 1) translate3d(0, 10%, 0);
+    opacity: 0;
+  }
+  
+  .state:focus~.label .text {
+    transform: translate3d(8px, 0, 0);
+    opacity: 1;
+  }
+  
+  .label:hover .text {
+    opacity: 1;
+  }
+  
+  .errorMessage {
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    color: red;
+  }
+  
+  .form-buttons{
+    cursor: pointer;
+    margin-left: 0;
+  }
+  
+   
+   .icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    width: 120px;
+  }
+  
+  .add-btn::before,
+  .add-btn::after {
+    
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: seagreen;
+  }
+  
+  .add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .icon-btn:focus {
+    outline: none;
+  }
+  
+  .btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .add-btn:hover::before,
+  .add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+  }
+  
+  .add-btn:hover .btn-txt {
+    opacity: 1;
+  }
+  
+  .add-icon::after,
+  .add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: seagreen;
+    overflow: hidden;
+  }
+  
+  .add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+  
+  .add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+}
